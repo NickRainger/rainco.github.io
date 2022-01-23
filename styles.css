@@ -103,7 +103,7 @@ html {
     transform: translateY(-100px);
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 3vh;
+    border-radius: 1vh;
 }
 
 .dropdown.active > .link {
