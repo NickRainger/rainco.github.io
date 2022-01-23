@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    background: #222222;/*
+    background-image: url("./img/img5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+}
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.background {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/img5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    top: 0;
+    z-index: -10;
+    left: 0;
+}
+
+.logo {
+    width: 10%;
+    position: absolute;
+    top: .5vw;
+    left: .5vw;
+}
+
+* {
+    font-size: 1vw;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    color: rgba(255, 255, 255, .5);
+    margin: .3vw 1vw;
+    background: none;
+    border-style: none;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.link:hover {
+    transform: scale(1.05);
+    color: rgba(255, 255, 255, 1);
+}
+
+.intro-text, .intro-title, .text {
+    margin: 5vh;
+}
+
+.nieuws-header {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5vh;
+    font-size: 5vh;
+    margin: 5vh 10vh 1vh;
+    padding: 5vh 10vh 5vh;
+}
+
+.nieuws-text {
+    margin: 1vh 1vh;
+}
+
+.nieuws-button {
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 5vh;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+.intro-text {
+    font-size: 1.5vw;
+}
+
+.intro-title {
+    font-size: 3vw;
+}
+
+.dropdown-menu {
+    overflow: hidden;
+    z-index: 3;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3vh;
+}
+
+.dropdown.active > .link {
+    color: white;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
+}
+
+.Information-list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.Information-grid {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+}
+
+.dropdown-heading {
+    background: rgba(0, 0, 0, 0.5);
+    padding: .3vw 1vw;
+}
+
+.dropdown-links {
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.small-spacer {
+    z-index: -9;
+    height: 10vh;
+    width: 0;
+}
+.spacer {
+    z-index: -9;
+    height: 70vh;
+    width: 0;
+}
+.big-spacer {
+    z-index: -9;
+    height: 100vh;
+    width: 0;
+}
+
+.transition-fade {
+    opacity: 1;
+    transform: translatex(0);
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+}
+
+html.is-animating .transition-fade {
+    transform: translatex(10vw);
+    opacity: 0;
+    pointer-events: none;
+}
+
+html.swup-enebled {
+    min-width: 0;
+}
+
+.main-title {
+    margin: 0;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    font-size: 6vw;
+    z-index: -1;
+}
+
+.main-title span {
+    font-size: 6vw;
+}
+
+.BUnderline {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+.arrowdown {
+    animation: bounce 4s 2s ease-in-out infinite;
+    font-size: 6vw;
+    margin: 0;
+}
+
+.RhenenLink {
+    pointer-events: all;
+    cursor: pointer;
+    color: blue;
+    font-size: 6vw;
+    text-decoration: underline;
+}
+
+.fa-map-marker-alt {
+    cursor: pointer;
+    color: blue;
+    font-size: 6vw;
+}
+
+.forum {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    padding: 5vw;
+    margin: 10vw 5vw;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 2vw;
+    pointer-events: all;
+    
+}
+
+.forum button {
+    font-size: 2vw;
+    list-style-type:none;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 1vw;
+    padding: .5vw 1vw;
+    margin: 2vw;
+    width: auto;
+}
+
+.forum h1 {
+    margin-left: 1vw;
+}
+
+form input, form textarea, form button, form textarea {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    display: flex;
+    flex-direction: column;
+    margin: .5vw;
+    display: list-item;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: #024C97;
+    background: rgba(0, 0, 0, .5);
+    color: rgb(255, 255, 255);
+    outline: 0;
+    transition: ease-in-out 500ms;
+    width: 50%;
+}
+
+form textarea {
+    width: 100%;
+}
+
+form > input:focus, form > textarea:focus {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    transition: ease-in-out 500ms;
+    border-color: rgb(255, 128, 0);
+}
+
+.download-list {
+    margin: 10vw;
+    list-style-type:none;
+}
+
+.download-list li {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 1vw;
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.download-list a {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.team-header {
+    margin: 0vh;
+}
+
+.team-foto {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    border-radius: 2vw;
+    width: 40vw;
+    float: left;
+    margin: 2.5vw;
+}
+
+.team-text-title {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    border-radius: 2vw;
+    font-size: 3vw;
+    padding: 5vw;
+}
+
+.team-text, .team-text span {
+    font-size: 1.5vw;
+    margin: 1vw;
+}
+
+@media screen and (max-width: 1000px) {
+    * {
+    font-size: 3.3vw;
+    }
+    body {
+        background-size: cover;
+    }
+    .Information-grid {
+        display: grid;
+        grid-template-columns: repeat(1, max-content);
+        gap: 2rem;
+    }
+    .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
+        top: 10vh;
+        font-size: 12vw;
+    }
+    .logo {
+        display: none;
+    }
+    .team-text, .team-text span {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+}
+
+@keyframes bounce {
+    0% {
+        transform: translatey(0);
+    }
+    20% {
+        transform: translatey(1vw);
+    }
+    40% {
+        transform: translatey(0);
+    }
+    100% {
+        transform: translatey(0);
+    }
+}
