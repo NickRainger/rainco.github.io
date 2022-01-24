@@ -35,7 +35,7 @@ html {
     position: absolute;
     background-position: center;
     top: 0;
-    z-index: -10;
+    z-index: -5;
     left: 0;
 }
 
