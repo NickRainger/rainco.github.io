@@ -255,7 +255,7 @@ html.swup-enebled {
 }
 
 .grey {
-    color: #444444;
+    color: #333333;
 }
 
 .forum button {
@@ -338,7 +338,8 @@ form > input:focus, form > textarea:focus {
     padding: 5vw;
 }
 
-.team-text, .team-text span {
+.team-text, .team-text span, .team-text a{
+    border-radius: 5px;
     right: 0;
     font-size: 1.5vw;
     margin: 1vw;
