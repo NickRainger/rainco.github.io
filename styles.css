@@ -249,6 +249,10 @@ html.swup-enebled {
     
 }
 
+.grey {
+    color: #444444;
+}
+
 .forum button {
     font-size: 2vw;
     list-style-type:none;
