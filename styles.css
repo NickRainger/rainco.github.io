@@ -308,7 +308,10 @@ form > input:focus, form > textarea:focus {
 }
 
 .team-header {
+    pointer-events: all;
+    width: 100vw;
     margin: 0vh;
+
 }
 
 .team-foto {
@@ -327,6 +330,7 @@ form > input:focus, form > textarea:focus {
 }
 
 .team-text, .team-text span {
+    right: 0;
     font-size: 1.5vw;
     margin: 1vw;
 }
