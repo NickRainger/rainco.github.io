@@ -110,7 +110,12 @@ html {
     text-decoration-color: blue;
 }
 
-.intro-text {
+.contact-link {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.intro-text, .intro-text a {
     font-size: 1.5vw;
 }
 
