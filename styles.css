@@ -70,7 +70,7 @@ html {
     transition: 100ms ease-in-out;
 }
 
-.link:hover {
+.link:hover, .linkhover {
     transform: scale(1.05);
     color: rgba(255, 255, 255, 1);
 }
