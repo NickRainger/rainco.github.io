@@ -2,11 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 body {
-    background: #222222;/*
-    background-image: url("./img/img5.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;*/
+    background: #222222;
 }
 html {
     overflow-x: hidden;
@@ -118,8 +114,14 @@ html {
 .intro-text, .intro-text a {
     font-size: 1.5vw;
 }
+.intro-text {
+    margin: 5vw;
+    width: 90vw;
+}
 
 .intro-title {
+    margin: 5vw;
+    width: 90vw;
     font-size: 3vw;
 }
 
@@ -131,8 +133,9 @@ html {
     opacity: 0;
     transform: translateY(-100px);
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-    background: rgba(0, 0, 0, 0.5);
+    background: #1a1a1a;
     border-radius: 1vh;
+    border: 1px solid grey;
 }
 
 .dropdown.active > .link {
@@ -151,19 +154,23 @@ html {
 }
 
 .Information-grid {
-    display: grid;
+    grid-column-gap: 0px;
+    display: flex;
+    justify-content: space-between;
     grid-template-columns: repeat(3, max-content);
 }
 
 .dropdown-heading {
-    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid grey;
+    background: rgb(42,26,40);
+    background: linear-gradient(0deg, rgba(42,26,40,1) 0%, rgba(38,26,50,1) 100%); 
     padding: .3vw 1vw;
 }
 
 .dropdown-links {
     border-bottom-left-radius: 3vh;
     border-bottom-right-radius: 3vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: column;
     gap: .25rem;
@@ -209,7 +216,7 @@ html.swup-enebled {
 .main-title {
     margin: 0;
     position: absolute;
-    top: 10vh;
+    top: 20vh;
     left: 10vw;
     font-size: 6vw;
     z-index: -1;
@@ -367,6 +374,49 @@ form > input:focus, form > textarea:focus {
     }
     .team-text, .team-text span {
         font-size: 2.5vw;
+    }
+    .small-spacer {
+        z-index: -9;
+        height: 10vh;
+        width: 0;
+    }
+    .spacer {
+        z-index: -9;
+        height: 40vh;
+        width: 0;
+    }
+    .big-spacer {
+        z-index: -9;
+        height: 60vh;
+        width: 0;
+    }
+    .intro-title {
+        margin: 10vw;
+        width: 80vw;
+        font-size: 10vw;
+    }
+    .intro-text, .intro-text a {
+        font-size: 5vw;
+    }
+    .intro-text {
+        margin: 10vw;
+        width: 80vw;
+    }
+    .main-title {
+        margin: 0;
+        position: absolute;
+        top: 10vh;
+    }
+    .team-text-title {
+        font-size: 8vw;
+        padding: 5vw;
+    }
+    
+    .team-text, .team-text span, .team-text a{
+        border-radius: 5px;
+        right: 0;
+        font-size: 3vw;
+        margin: 1vw;
     }
 }
 
