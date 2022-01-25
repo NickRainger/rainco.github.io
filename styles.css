@@ -240,14 +240,14 @@ html.swup-enebled {
 .RhenenLink {
     pointer-events: all;
     cursor: pointer;
-    color: #48CAE4;
+    color: blue;
     font-size: 6vw;
     text-decoration: underline;
 }
 
 .fa-map-marker-alt {
     cursor: pointer;
-    color: #11128e;
+    color: blue;
     font-size: 6vw;
 }
 
