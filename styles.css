@@ -307,6 +307,7 @@ form > input:focus, form > textarea:focus {
 }
 
 .download-list {
+    width: 90vw;
     display: flex;
     flex-direction: column;
     margin: 5vw;
@@ -341,7 +342,7 @@ form > input:focus, form > textarea:focus {
 }
 
 .download-list a img:hover {
-    height: 50vh;
+    height: 75vh;
 }
 
 .download-list a:hover > .download-img {
