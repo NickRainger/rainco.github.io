@@ -240,14 +240,14 @@ html.swup-enebled {
 .RhenenLink {
     pointer-events: all;
     cursor: pointer;
-    color: blue;
+    color: #11128e;
     font-size: 6vw;
     text-decoration: underline;
 }
 
 .fa-map-marker-alt {
     cursor: pointer;
-    color: blue;
+    color: #11128e;
     font-size: 6vw;
 }
 
@@ -262,7 +262,7 @@ html.swup-enebled {
 }
 
 .grey {
-    color: #333333;
+    color: #444444;
 }
 
 .forum button {
@@ -417,6 +417,13 @@ form > input:focus, form > textarea:focus {
         right: 0;
         font-size: 3vw;
         margin: 1vw;
+    }
+    .team-foto {
+        box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+        border-radius: 2vw;
+        width: 90vw;
+        float: left;
+        margin: 2.5vw;
     }
 }
 
