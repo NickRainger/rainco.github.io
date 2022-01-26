@@ -71,6 +71,7 @@ html {
 .link {
     color: rgba(255, 255, 255, .5);
     margin: .3vw 1vw;
+    font-size: 1rem;
     background: none;
     border-style: none;
     cursor: pointer;
@@ -390,6 +391,11 @@ form > input:focus, form > textarea:focus {
     right: 0;
     font-size: 1.5rem;
     margin: 1vw;
+}
+
+.transition {
+    width: 100vw;
+    z-index: 10;
 }
 
 
