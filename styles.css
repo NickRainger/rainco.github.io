@@ -94,7 +94,11 @@ html {
     padding: 5vh 10vh 5vh;
 }
 
-.nieuws-text {
+.nieuws-title {
+    font-size: 2.5rem;
+}
+
+.nieuws-text-short {
     margin: 1vh 1vh;
     font-size: 1rem;
 }
@@ -105,6 +109,11 @@ html {
     font-size: 5vh;
     text-decoration: underline;
     text-decoration-color: blue;
+}
+
+.nieuws-button:hover > .nieuws-text-short {
+    font-size: 3rem;
+    background: red;
 }
 
 .contact-link {
@@ -158,7 +167,6 @@ html {
     grid-column-gap: 0px;
     display: flex;
     justify-content: space-between;
-    grid-template-columns: repeat(3, max-content);
 }
 
 .dropdown-heading {
@@ -390,8 +398,7 @@ form > input:focus, form > textarea:focus {
         background-size: cover;
     }
     .Information-grid {
-        display: grid;
-        grid-template-columns: repeat(1, max-content);
+        flex-direction: column;
         gap: 2rem;
     }
     .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
