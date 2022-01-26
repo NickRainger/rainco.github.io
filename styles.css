@@ -6,7 +6,6 @@ body {
 }
 
 html {
-    font-size: 30px;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -49,10 +48,10 @@ html {
 }
 
 .logo {
-    width: 10%;
+    width: 10vw;
     position: absolute;
-    top: .5rem;
-    left: .5rem;
+    top: 1vw;
+    left: 1vw;
 }
 
 * {
@@ -64,16 +63,18 @@ html {
 
 .header {
     left: 0;
-    right: 0;
+    position: absolute;
     display: flex;
     justify-content: center;
+    right: 0;
+    font-size: 1vw;
 }
 
 .link {
     color: rgba(255, 255, 255, .5);
     margin: .3vw 1vw;
-    font-size: 1rem;
     background: none;
+    font-size: 1vw;
     border-style: none;
     cursor: pointer;
     transition: 100ms ease-in-out;
@@ -94,32 +95,28 @@ html {
 }
 
 .nieuws-header {
+    width: 90vw;
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 5vh;
-    font-size: 1.5rem;
-    margin: 5rem 2rem 5rem;
-    padding: 2rem 2rem 2rem;
+    border-radius: 2.5vh;
+    margin: 5vh;
+    padding: 5vh;
 }
 
 .nieuws-title {
-    font-size: 1.5rem;
+    font-size: 4vh;
+    margin: 0;
 }
 
-.nieuws-text-short {
-    margin: 1vh 1vh;
-    font-size: 1rem;
+.nieuws-text {
+    font-size: 2.5vh;
 }
 
 .nieuws-button {
     pointer-events: all;
     cursor: pointer;
-    font-size: 5vh;
+    font-size: 2vw;
     text-decoration: underline;
     text-decoration-color: blue;
-}
-
-.nieuws-button:hover > .nieuws-text-short {
-    font-size: 1.5rem;
 }
 
 .contact-link {
@@ -128,7 +125,7 @@ html {
 }
 
 .intro-text, .intro-text a {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 .intro-text {
     margin: 5vw;
@@ -138,7 +135,7 @@ html {
 .intro-title {
     margin: 5vw;
     width: 90vw;
-    font-size: 3rem;
+    font-size: 5vh;
 }
 
 .dropdown-menu {
@@ -233,12 +230,12 @@ html.swup-enebled {
     position: absolute;
     top: 20vh;
     left: 10vw;
-    font-size: 5rem;
+    font-size: 10vh;
     z-index: -1;
 }
 
 .main-title span {
-    font-size: 5rem;
+    font-size: 10vh;
 }
 
 .BUnderline {
@@ -248,7 +245,7 @@ html.swup-enebled {
 
 .arrowdown {
     animation: bounce 4s 2s ease-in-out infinite;
-    font-size: 5rem;
+    font-size: 10vh;
     margin: 0;
 }
 
@@ -256,14 +253,14 @@ html.swup-enebled {
     pointer-events: all;
     cursor: pointer;
     color: #0000ff;
-    font-size: 5rem;
+    font-size: 10vh;
     text-decoration: underline;
 }
 
 .fa-map-marker-alt {
     cursor: pointer;
     color: blue;
-    font-size: 5rem;
+    font-size: 10vh;
 }
 
 .forum {
@@ -405,12 +402,8 @@ form > input:focus, form > textarea:focus {
 
 
 @media screen and (max-width: 1000px) {
-    html {
-        font-size: 30px;
-    }
     body {
         background-size: cover;
-        font-size: 20px;
     }
     .Information-grid {
         flex-direction: column;
@@ -427,6 +420,9 @@ form > input:focus, form > textarea:focus {
     }
     .team-text, .team-text span {
         font-size: 2.5vw;
+    }
+    .link {
+        font-size: 3.5vw;
     }
     /*
     .small-spacer {
