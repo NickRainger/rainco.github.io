@@ -157,7 +157,6 @@ html {
     grid-column-gap: 0px;
     display: flex;
     justify-content: space-between;
-    grid-template-columns: repeat(3, max-content);
 }
 
 .dropdown-heading {
@@ -389,8 +388,7 @@ form > input:focus, form > textarea:focus {
         background-size: cover;
     }
     .Information-grid {
-        display: grid;
-        grid-template-columns: repeat(1, max-content);
+        flex-direction: column;
         gap: 2rem;
     }
     .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
