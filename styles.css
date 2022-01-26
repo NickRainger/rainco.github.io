@@ -89,12 +89,15 @@ html {
 .nieuws-header {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5vh;
-    font-size: 5vh;
     margin: 5vh 10vh 1vh;
     padding: 5vh 10vh 5vh;
 }
 
-.nieuws-text {
+.nieuws-title {
+    font-size: 2.5rem;
+}
+
+.nieuws-text-short {
     margin: 1vh 1vh;
 }
 
@@ -104,6 +107,11 @@ html {
     font-size: 5vh;
     text-decoration: underline;
     text-decoration-color: blue;
+}
+
+.nieuws-button:hover > .nieuws-text-short {
+    font-size: 3rem;
+    background: red;
 }
 
 .contact-link {
