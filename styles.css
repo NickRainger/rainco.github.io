@@ -4,6 +4,7 @@
 body {
     background: #222222;
 }
+
 html {
     font-size: 30px;
     overflow-x: hidden;
@@ -87,12 +88,17 @@ html {
     margin: 5vh;
 }
 
+.nieuws-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .nieuws-header {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5vh;
     font-size: 1.5rem;
-    margin: 5vh 10vh 1vh;
-    padding: 5vh 10vh 5vh;
+    margin: 5rem 2rem 5rem;
+    padding: 2rem 2rem 2rem;
 }
 
 .nieuws-title {
@@ -113,8 +119,7 @@ html {
 }
 
 .nieuws-button:hover > .nieuws-text-short {
-    font-size: 3rem;
-    background: red;
+    font-size: 1.5rem;
 }
 
 .contact-link {
@@ -400,8 +405,12 @@ form > input:focus, form > textarea:focus {
 
 
 @media screen and (max-width: 1000px) {
+    html {
+        font-size: 30px;
+    }
     body {
         background-size: cover;
+        font-size: 20px;
     }
     .Information-grid {
         flex-direction: column;
