@@ -455,6 +455,12 @@ form > input:focus, form > textarea:focus {
     border-radius: 5px;
 }
 
+.marion {
+    border-radius: 45px;
+    width: 229px;
+    padding: 2.5vw;
+}
+
 @media screen and (max-width: 800px) {
     body {
         background-size: cover;
