@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    background: #222222;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.background {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/img4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    top: 0;
+    z-index: -10;
+    left: 0;
+}
+
+.fourofour-background {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/404.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    top: 0;
+    z-index: -2;
+    left: 0;
+}
+
+.fourofour-div {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo {
+    width: 10vw;
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    opacity: .5;
+    transition: 200ms ease-in-out;
+}
+.logo:hover {
+    transition: 200ms ease-in-out;
+    width: 10.5vw;
+    opacity: 1;
+    top: .75vh;
+    left: .75vw;
+}
+
+* {
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header {
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    font-size: 1vw;
+}
+
+.link {
+    color: #ffffff80;
+    margin: .3vw 1vw;
+    background: none;
+    font-size: 1vw;
+    border-style: none;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.link:hover, .linkhover {
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+.nieuws-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nieuws-header {
+    width: 90vw;
+    background: #191919ee;
+    border-radius: 2.5vh;
+    margin: 2.5vw;
+    padding: 2.5vw;
+}
+
+.nieuws-title {
+    font-size: 30px;
+    margin: 0;
+}
+
+.nieuws-text {
+    font-size: 20px;
+}
+
+.nieuws-button {
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    color: #ffffff80;
+    text-decoration-color: #0000ff;
+    transition: 200ms ease-in-out;
+}
+.nieuws-button:hover {
+    transition: 200ms ease-in-out;
+    text-decoration-color: #0000ff;
+    color: #ffffff;
+}
+
+.contact-link {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.intro-container {
+    background-color: #191919ee;
+    margin: 2.5vw;
+    border-radius: 2.5vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text, .intro-title, .text {
+    margin: 2.5vw;
+}
+
+.intro-text, .intro-text a {
+    font-size: 20px;
+}
+.intro-text {
+    margin: 2.5vw;
+}
+
+.intro-text p {
+    margin: 2.5vw;
+}
+
+.intro-title {
+    text-align: center;
+    margin: 2%;
+    width: 90%;
+    font-size: 30px;
+}
+.intro-title::after {
+    content: '';
+    width: 300px;
+    display: block;
+    height: 3px;
+    margin: 15px auto 10px auto;
+    justify-self: center;
+    background: #ff8000;
+}
+
+.dropdown-menu {
+    overflow: hidden;
+    z-index: 3;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+    background: #1a1a1a;
+    border-radius: 1vh;
+    border: 1px solid grey;
+}
+
+.dropdown.active > .link {
+    color: white;
+}
+
+/*.dropdown.active, */.dropdown:hover > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
+}
+
+.Information-list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.Information-grid {
+    grid-column-gap: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-heading {
+    border-bottom: 1px solid #808080;
+    background: rgb(42,26,40);
+    background: linear-gradient(0deg, rgba(42,26,40,1) 0%, rgba(38,26,50,1) 100%); 
+    padding: .3vw 1vw;
+}
+
+.dropdown-links {
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.small-spacer {
+    z-index: -9;
+    height: 10vh;
+    width: 0;
+}
+.spacer {
+    z-index: -9;
+    height: 50vh;
+    width: 0;
+}
+.big-spacer {
+    z-index: -9;
+    height: 75vh;
+    width: 0;
+}
+
+.transition-fade {
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    z-index: -5;
+    opacity: 1;
+    transform: translatex(0);
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+}
+
+html.is-animating .transition-fade {
+    transform: translatex(10vw);
+    opacity: 0;
+    pointer-events: none;
+}
+
+html.swup-enebled {
+    min-width: 0;
+}
+
+.main-title {
+    margin: 0;
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+    font-size: 10vh;
+    z-index: -1;
+}
+
+.main-title span {
+    font-size: 10vh;
+}
+
+.BUnderline {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: blue;
+}
+
+.arrowdown {
+    animation: bounce 4s 2s ease-in-out infinite;
+    font-size: 10vh;
+    margin: 0;
+}
+
+.RhenenLink {
+    pointer-events: all;
+    cursor: pointer;
+    color: #0000ff;
+    font-size: 10vh;
+    text-decoration: underline;
+}
+
+.fa-map-marker-alt {
+    cursor: pointer;
+    color: blue;
+    font-size: 10vh;
+}
+
+.forum {
+    padding: 5vw;
+    margin: 5vw;
+    width: 80vw;
+    background: #191919ee;
+    border-radius: 2vw;
+    pointer-events: all;
+    
+}
+
+.grey {
+    color: #444444;
+}
+
+.forum button {
+    font-size: 1rem;
+    list-style-type:none;
+    background: #00000080;
+    padding: .5vw;
+    margin: 2vw .5vw;
+    width: auto;
+}
+.forum button:hover {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    border-color: #ff8000;
+}
+
+.forum h1 {
+    margin: 3vw 1vw 0;
+}
+
+form input, form textarea, form button, form textarea {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    display: flex;
+    flex-direction: column;
+    margin: .5vw;
+    font-size: 15px;
+    padding: .5vw;
+    border-radius: 5px;
+    display: list-item;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: #024C97;
+    background: #00000080;
+    color: rgb(255, 255, 255);
+    outline: 0;
+    transition: ease-in-out 500ms;
+    width: 20%;
+}
+
+form textarea {
+    width: 100%;
+}
+
+form > input:focus, form > textarea:focus {
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.75);
+    transition: ease-in-out 500ms;
+    border-color: #ff8000;
+}
+
+.download-list {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+    list-style-type:none;
+}
+
+.download-list a i{
+    font-size: 1rem;
+}
+
+.download-list a {
+    border-radius: 5px;
+    line-height: 10vh;
+    font-size: 1vw;
+    background-color: #191919ee;
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: #024C97;
+    margin: 1vw;
+    padding: 1vw;
+    cursor: pointer;
+    pointer-events: all;
+    border-radius: 5px;
+    transition: 500ms ease-in-out;
+}
+.download-list a:hover {
+    transition: 500ms ease-in-out;
+    border-color: #ff8000;
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+}
+
+.download-list a img {
+    border-radius: .5vw;
+    transition: 1000ms ease-in-out;
+    margin: 1vw;
+    height: 10vh;
+    float: left;
+}
+
+.download-list a img:hover {
+    height: 90vh;
+}
+
+.download-list a:hover > .download-img {
+    transition: 500ms ease-in-out;
+    opacity: 1;
+}
+
+.team-header {
+    pointer-events: all;
+    width: 100vw;
+    padding: 1vw;
+    background: #191919ee;
+}
+
+.team-foto {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    border-radius: 2vw;
+    width: 40vw;
+    float: left;
+    margin: 2.5vw;
+}
+
+.team-text-title {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    border-radius: 2vw;
+    font-size: 30px;
+    padding: 30px;
+}
+
+.team-text, .team-text span, .team-text a{
+    border-radius: 5px;
+    right: 0;
+    font-size: 20px;
+    margin: 2vw 0;
+}
+
+.transition {
+    width: 100vw;
+    z-index: 10;
+}
+
+.Contributie {
+    width: calc(827px/2);
+    margin: 0 5vw;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-size: cover;
+    }
+    .Information-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
+        pointer-events: all;
+        top: 10vw;
+        left: 10vw;
+        font-size: 15vw;
+    }
+    .logo {
+        display: none;
+    }
+    .team-text, .team-text span {
+        font-size: 2.5vw;
+    }
+    .link {
+        font-size: 3.5vw;
+    }
+    form input, form textarea, form button, form textarea {
+        width: 100%;
+    }
+    /*
+    .small-spacer {
+        z-index: -9;
+        height: 10vh;
+        width: 0;
+    }
+    .spacer {
+        z-index: -9;
+        height: 40vh;
+        width: 0;
+    }
+    .big-spacer {
+        z-index: -9;
+        height: 60vh;
+        width: 0;
+    }
+    .intro-title {
+        margin: 10vw;
+        width: 80vw;
+        font-size: 7.5vw;
+    }
+    .intro-text, .intro-text a {
+        font-size: 5vw;
+    }
+    .intro-text {
+        margin: 10vw;
+        width: 80vw;
+    }*/
+    .main-title {
+        margin: 0;
+        position: absolute;
+        top: 10vh;
+    }
+    .team-text-title {
+        font-size: 8vw;
+        padding: 5vw;
+    }
+    
+    .team-text, .team-text span, .team-text a{
+        border-radius: 5px;
+        right: 0;
+        font-size: 5vw;
+        margin: 1vw;
+    }
+    .team-foto {
+        box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+        border-radius: 2vw;
+        width: 90vw;
+        float: left;
+        margin: 2.5vw;
+    }
+}
+
+
+
+
+@keyframes bounce {
+    0% {
+        transform: translatey(0);
+    }
+    20% {
+        transform: translatey(1vw);
+    }
+    40% {
+        transform: translatey(0);
+    }
+    100% {
+        transform: translatey(0);
+    }
+}
