@@ -189,7 +189,7 @@ html {
     border: 1px solid grey;
 }
 
-.dropdown.active > .link {
+/*.dropdown.active, */.dropdown:hover > .link {
     color: white;
 }
 
