@@ -146,14 +146,14 @@ html {
 }
 
 .intro-text, .intro-title, .text {
-    margin: 2.5vw;
+    margin: 1vw;
 }
 
 .intro-text, .intro-text a {
     font-size: 20px;
 }
 .intro-text {
-    margin: 2.5vw;
+    margin: 1.5vw 2.5vw;
 }
 
 .intro-text p {
@@ -456,9 +456,14 @@ form > input:focus, form > textarea:focus {
 }
 
 .marion {
-    border-radius: 45px;
-    width: 229px;
-    padding: 2.5vw;
+    border-radius: 5px;
+    width: calc(229px/2);
+    margin: 0 2.5vw;
+}
+
+.contact-marion {
+    cursor: pointer;
+    pointer-events: all;
 }
 
 @media screen and (max-width: 800px) {
