@@ -1,9 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 body {
     background: #222222;
 }
+
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -47,31 +47,42 @@ html {
 }
 
 .logo {
-    width: 10%;
+    width: 10vw;
     position: absolute;
-    top: .5vw;
-    left: .5vw;
+    top: 1vh;
+    left: 1vw;
+    opacity: .5;
+    transition: 200ms ease-in-out;
+}
+.logo:hover {
+    transition: 200ms ease-in-out;
+    width: 10.5vw;
+    opacity: 1;
+    top: .75vh;
+    left: .75vw;
 }
 
 * {
-    font-size: 1vw;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 .header {
     left: 0;
-    right: 0;
+    position: absolute;
     display: flex;
     justify-content: center;
+    right: 0;
+    font-size: 1vw;
 }
 
 .link {
-    color: rgba(255, 255, 255, .5);
+    color: #ffffff80;
     margin: .3vw 1vw;
     background: none;
+    font-size: 1vw;
     border-style: none;
     cursor: pointer;
     transition: 100ms ease-in-out;
@@ -79,39 +90,45 @@ html {
 
 .link:hover, .linkhover {
     transform: scale(1.05);
-    color: rgba(255, 255, 255, 1);
+    color: #ffffff;
 }
 
-.intro-text, .intro-title, .text {
-    margin: 5vh;
+.nieuws-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .nieuws-header {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 5vh;
-    margin: 5vh 10vh 1vh;
-    padding: 5vh 10vh 5vh;
+    width: 90vw;
+    background: #191919ee;
+    border-radius: 2.5vh;
+    margin: 2.5vw;
+    padding: 2.5vw;
 }
 
 .nieuws-title {
-    font-size: 2.5rem;
+    font-size: 30px;
+    margin: 0;
 }
 
-.nieuws-text-short {
-    margin: 1vh 1vh;
+.nieuws-text {
+    font-size: 20px;
 }
 
 .nieuws-button {
     pointer-events: all;
     cursor: pointer;
-    font-size: 5vh;
+    font-size: 25px;
     text-decoration: underline;
-    text-decoration-color: blue;
+    text-decoration-thickness: 3px;
+    color: #ffffff80;
+    text-decoration-color: #0000ff;
+    transition: 200ms ease-in-out;
 }
-
-.nieuws-button:hover > .nieuws-text-short {
-    font-size: 3rem;
-    background: red;
+.nieuws-button:hover {
+    transition: 200ms ease-in-out;
+    text-decoration-color: #0000ff;
+    color: #ffffff;
 }
 
 .contact-link {
@@ -119,18 +136,44 @@ html {
     pointer-events: all;
 }
 
+.intro-container {
+    background-color: #191919ee;
+    margin: 2.5vw;
+    border-radius: 2.5vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text, .intro-title, .text {
+    margin: 2.5vw;
+}
+
 .intro-text, .intro-text a {
-    font-size: 1.5vw;
+    font-size: 20px;
 }
 .intro-text {
-    margin: 5vw;
-    width: 90vw;
+    margin: 2.5vw;
+}
+
+.intro-text p {
+    margin: 2.5vw;
 }
 
 .intro-title {
-    margin: 5vw;
-    width: 90vw;
-    font-size: 3vw;
+    text-align: center;
+    margin: 2%;
+    width: 90%;
+    font-size: 30px;
+}
+.intro-title::after {
+    content: '';
+    width: 300px;
+    display: block;
+    height: 3px;
+    margin: 15px auto 10px auto;
+    justify-self: center;
+    background: #ff8000;
 }
 
 .dropdown-menu {
@@ -150,7 +193,7 @@ html {
     color: white;
 }
 
-.dropdown.active > .link + .dropdown-menu {
+/*.dropdown.active, */.dropdown:hover > .link + .dropdown-menu {
     opacity: 1;
     transform: translateY(0px);
     pointer-events: auto;
@@ -168,7 +211,7 @@ html {
 }
 
 .dropdown-heading {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #808080;
     background: rgb(42,26,40);
     background: linear-gradient(0deg, rgba(42,26,40,1) 0%, rgba(38,26,50,1) 100%); 
     padding: .3vw 1vw;
@@ -177,7 +220,7 @@ html {
 .dropdown-links {
     border-bottom-left-radius: 3vh;
     border-bottom-right-radius: 3vh;
-    background: rgba(0, 0, 0, 0);
+    background: #000000;
     display: flex;
     flex-direction: column;
     gap: .25rem;
@@ -189,12 +232,12 @@ html {
 }
 .spacer {
     z-index: -9;
-    height: 70vh;
+    height: 50vh;
     width: 0;
 }
 .big-spacer {
     z-index: -9;
-    height: 100vh;
+    height: 75vh;
     width: 0;
 }
 
@@ -223,24 +266,25 @@ html.swup-enebled {
 .main-title {
     margin: 0;
     position: absolute;
-    top: 20vh;
-    left: 10vw;
-    font-size: 6vw;
+    top: 15vh;
+    left: 25vw;
+    font-size: 10vh;
     z-index: -1;
 }
 
 .main-title span {
-    font-size: 6vw;
+    font-size: 10vh;
 }
 
 .BUnderline {
     text-decoration: underline;
+    text-decoration-thickness: 3px;
     text-decoration-color: blue;
 }
 
 .arrowdown {
     animation: bounce 4s 2s ease-in-out infinite;
-    font-size: 6vw;
+    font-size: 10vh;
     margin: 0;
 }
 
@@ -248,21 +292,21 @@ html.swup-enebled {
     pointer-events: all;
     cursor: pointer;
     color: #0000ff;
-    font-size: 6vw;
+    font-size: 10vh;
     text-decoration: underline;
 }
 
 .fa-map-marker-alt {
     cursor: pointer;
     color: blue;
-    font-size: 6vw;
+    font-size: 10vh;
 }
 
 .forum {
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
     padding: 5vw;
-    margin: 10vw 5vw;
-    background: rgba(0, 0, 0, .5);
+    margin: 5vw;
+    width: 80vw;
+    background: #191919ee;
     border-radius: 2vw;
     pointer-events: all;
     
@@ -273,17 +317,20 @@ html.swup-enebled {
 }
 
 .forum button {
-    font-size: 2vw;
+    font-size: 1rem;
     list-style-type:none;
-    background: rgba(0, 0, 0, .5);
-    border-radius: 1vw;
-    padding: .5vw 1vw;
-    margin: 2vw;
+    background: #00000080;
+    padding: .5vw;
+    margin: 2vw .5vw;
     width: auto;
+}
+.forum button:hover {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    border-color: #ff8000;
 }
 
 .forum h1 {
-    margin-left: 1vw;
+    margin: 3vw 1vw 0;
 }
 
 form input, form textarea, form button, form textarea {
@@ -291,16 +338,19 @@ form input, form textarea, form button, form textarea {
     display: flex;
     flex-direction: column;
     margin: .5vw;
+    font-size: 15px;
+    padding: .5vw;
+    border-radius: 5px;
     display: list-item;
     border-style: none;
     border-bottom-style: solid;
     border-bottom-width: 5px;
     border-color: #024C97;
-    background: rgba(0, 0, 0, .5);
+    background: #00000080;
     color: rgb(255, 255, 255);
     outline: 0;
     transition: ease-in-out 500ms;
-    width: 50%;
+    width: 20%;
 }
 
 form textarea {
@@ -308,9 +358,9 @@ form textarea {
 }
 
 form > input:focus, form > textarea:focus {
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.75);
     transition: ease-in-out 500ms;
-    border-color: rgb(255, 128, 0);
+    border-color: #ff8000;
 }
 
 .download-list {
@@ -322,38 +372,45 @@ form > input:focus, form > textarea:focus {
 }
 
 .download-list a i{
-    font-size: 2vw;
+    font-size: 1rem;
 }
 
 .download-list a {
-    font-size: 3vh;
-    background-color: rgba(0, 0, 0, .5);
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
-    border-radius: 1vw;
+    border-radius: 5px;
+    line-height: 10vh;
+    font-size: 1vw;
+    background-color: #191919ee;
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: #024C97;
     margin: 1vw;
     padding: 1vw;
     cursor: pointer;
     pointer-events: all;
+    border-radius: 5px;
+    transition: 500ms ease-in-out;
 }
 .download-list a:hover {
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    transition: 500ms ease-in-out;
+    border-color: #ff8000;
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
 }
 
 .download-list a img {
     border-radius: .5vw;
-    transition: 200ms ease-in-out;
+    transition: 1000ms ease-in-out;
     margin: 1vw;
     height: 10vh;
-    display: none;
-    float: right;
+    float: left;
 }
 
 .download-list a img:hover {
-    height: 75vh;
+    height: 90vh;
 }
 
 .download-list a:hover > .download-img {
-    display: block;
     transition: 500ms ease-in-out;
     opacity: 1;
 }
@@ -361,8 +418,8 @@ form > input:focus, form > textarea:focus {
 .team-header {
     pointer-events: all;
     width: 100vw;
-    margin: 0vh;
-
+    padding: 1vw;
+    background: #191919ee;
 }
 
 .team-foto {
@@ -376,22 +433,29 @@ form > input:focus, form > textarea:focus {
 .team-text-title {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
     border-radius: 2vw;
-    font-size: 3vw;
-    padding: 5vw;
+    font-size: 30px;
+    padding: 30px;
 }
 
 .team-text, .team-text span, .team-text a{
     border-radius: 5px;
     right: 0;
-    font-size: 1.5vw;
-    margin: 1vw;
+    font-size: 20px;
+    margin: 2vw 0;
 }
 
+.transition {
+    width: 100vw;
+    z-index: 10;
+}
 
-@media screen and (max-width: 1000px) {
-    * {
-    font-size: 3.3vw;
-    }
+.Contributie {
+    width: calc(827px/2);
+    margin: 0 5vw;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
     body {
         background-size: cover;
     }
@@ -401,15 +465,21 @@ form > input:focus, form > textarea:focus {
     }
     .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
         pointer-events: all;
-        top: 10vh;
-        left: 5vw;
-        font-size: 12vw;
+        top: 10vw;
+        left: 10vw;
+        font-size: 15vw;
     }
     .logo {
         display: none;
     }
     .team-text, .team-text span {
         font-size: 2.5vw;
+    }
+    .link {
+        font-size: 3.5vw;
+    }
+    form input, form textarea, form button, form textarea {
+        width: 100%;
     }
     /*
     .small-spacer {
@@ -426,11 +496,11 @@ form > input:focus, form > textarea:focus {
         z-index: -9;
         height: 60vh;
         width: 0;
-    }*/
+    }
     .intro-title {
         margin: 10vw;
         width: 80vw;
-        font-size: 10vw;
+        font-size: 7.5vw;
     }
     .intro-text, .intro-text a {
         font-size: 5vw;
@@ -438,7 +508,7 @@ form > input:focus, form > textarea:focus {
     .intro-text {
         margin: 10vw;
         width: 80vw;
-    }
+    }*/
     .main-title {
         margin: 0;
         position: absolute;
@@ -464,8 +534,8 @@ form > input:focus, form > textarea:focus {
     }
 }
 
-@media screen and (min-width: 1001px) {
-}
+
+
 
 @keyframes bounce {
     0% {
