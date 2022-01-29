@@ -1,3 +1,3 @@
 $(function(){
-    $('#header').load('/header.progamer');
+    $('#header').load('/header.html');
 })
