@@ -463,7 +463,7 @@ form div h1 > input:focus, form > textarea:focus {
     font-size: 40px;
     position: absolute;
     pointer-events: all;
-    cursor: pointer;
+    cursor: pointer;    
     text-decoration-thickness: 5px;
 }
 
