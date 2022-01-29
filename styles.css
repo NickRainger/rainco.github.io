@@ -334,6 +334,7 @@ html.swup-enebled {
 
 .forum h1 {
     margin: 3vw 1vw 0;
+    flex: auto;
 }
 
 .forum-top input, form button, form textarea {
@@ -352,7 +353,6 @@ html.swup-enebled {
     color: rgb(255, 255, 255);
     outline: 0;
     transition: ease-in-out 500ms;
-    width: 20%;
 }
 
 form textarea {
@@ -469,12 +469,17 @@ form div h1 > input:focus, form > textarea:focus {
 
 .cta {
     top: 50vh;
-    left: 60vw;
+    left: 70vw;
     font-size: 40px;
     position: absolute;
     pointer-events: all;
     cursor: pointer;    
     text-decoration-thickness: 5px;
+}
+
+.button {
+    pointer-events: all;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 801px) {
