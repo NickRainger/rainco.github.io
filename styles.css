@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-body {
-    background: #222222;
+:root {
+    --blue1: #030609;
+    --blue2: #060c11;
+    --blue3: #091219;
+    --blue4: #0c1821;
+    --blue5: #101d29;
+    --blue6: #142131;
+    --blue7: #182639;
+    --blue8: #1b2a41;
+    --blue9: #213249;
+    --blue10: #273a50;
 }
 
+body {
+    background: var(--blue1);
+}
+
+
 html {
+    font-size: 15px;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -100,7 +115,7 @@ html {
 
 .nieuws-header {
     width: 90vw;
-    background: #191919ee;
+    background: var(--blue2);
     border-radius: 2.5vh;
     margin: 2.5vw;
     padding: 2.5vw;
@@ -122,7 +137,7 @@ html {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     color: #ffffff80;
-    text-decoration-color: #0000ff;
+    text-decoration-color: var(--blue4);
     transition: 200ms ease-in-out;
 }
 .nieuws-button:hover {
@@ -137,33 +152,29 @@ html {
 }
 
 .intro-container {
-    background-color: #191919ee;
+    background: var(--blue2);
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
     margin: 2.5vw;
+    padding: 2.5vw;
     border-radius: 2.5vh;
-    width: 95vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
 }
-
+/*
 .intro-text, .intro-title, .text {
-    margin: 1vw;
 }
 
 .intro-text, .intro-text a {
-    font-size: 20px;
 }
 .intro-text {
-    margin: 1.5vw 2.5vw;
 }
 
 .intro-text p {
-    margin: 2.5vw;
 }
-
+*/
 .intro-title {
     text-align: center;
-    margin: 2%;
-    width: 90%;
     font-size: 30px;
 }
 .intro-title::after {
@@ -184,7 +195,7 @@ html {
     opacity: 0;
     transform: translateY(-100px);
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-    background: #080808;
+    background: var(--blue3);
     border-radius: 1vh;
     border: 1px solid grey;
 }
@@ -202,8 +213,8 @@ html {
 
 .dropdown-heading {
     border-bottom: 1px solid #808080;
-    background: rgb(42,26,40);
     background: linear-gradient(0deg, rgba(42,26,40,1) 0%, rgba(38,26,50,1) 100%); 
+    background: var(--blue4);
     padding: .3vw 1vw;
     font-size: 20px;
 }
@@ -211,7 +222,7 @@ html {
 .dropdown-links {
     border-bottom-left-radius: 3vh;
     border-bottom-right-radius: 3vh;
-    background: #000000;
+    background: var(--blue3);
     display: flex;
     flex-direction: column;
     gap: .25rem;
@@ -269,7 +280,7 @@ html.swup-enebled {
 
 .BUnderline {
     text-decoration: underline;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 3px;
     text-decoration-color: blue;
 }
 
@@ -285,7 +296,7 @@ html.swup-enebled {
     color: #0000ff;
     font-size: 10vh;
     text-decoration: underline;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 3px;
 }
 
 .fa-map-marker-alt {
@@ -298,7 +309,7 @@ html.swup-enebled {
     padding: 5vw;
     margin: 5vw;
     width: 80vw;
-    background: #191919ee;
+    background: var(--blue2);
     border-radius: 2vw;
     pointer-events: all;
     
@@ -311,7 +322,7 @@ html.swup-enebled {
 .forum button {
     font-size: 1rem;
     list-style-type:none;
-    background: #00000080;
+    background: var(--blue3);
     padding: .5vw;
     margin: 2vw .5vw;
     width: auto;
@@ -336,8 +347,8 @@ html.swup-enebled {
     border-style: none;
     border-bottom-style: solid;
     border-bottom-width: 5px;
-    border-color: #024C97;
-    background: #00000080;
+    border-color: #0000ff;
+    background: var(--blue3);
     color: rgb(255, 255, 255);
     outline: 0;
     transition: ease-in-out 500ms;
@@ -370,7 +381,7 @@ form div h1 > input:focus, form > textarea:focus {
     border-radius: 5px;
     line-height: 10vh;
     font-size: 1vw;
-    background-color: #191919ee;
+    background: var(--blue2);
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
     border-style: none;
     border-bottom-style: solid;
@@ -410,7 +421,7 @@ form div h1 > input:focus, form > textarea:focus {
     pointer-events: all;
     width: 100vw;
     padding: 1vw;
-    background: #191919ee;
+    background: var(--blue2);
 }
 
 .team-foto {
@@ -448,8 +459,7 @@ form div h1 > input:focus, form > textarea:focus {
 
 .marion {
     border-radius: 5px;
-    width: calc(229px/2);
-    margin: 0 2.5vw;
+    width: calc(229px/2);   
 }
 
 .contact-marion {
