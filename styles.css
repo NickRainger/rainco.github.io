@@ -168,11 +168,11 @@ html {
 .intro-text, .intro-text a {
 }
 .intro-text {
-}
+}*/
 
 .intro-text p {
+    margin-left: 1vw;
 }
-*/
 .intro-title {
     text-align: center;
     font-size: 30px;
@@ -434,6 +434,7 @@ form div h1 > input:focus, form > textarea:focus {
 
 .team-text-title {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    background: var(--blue3);
     border-radius: 2vw;
     font-size: 30px;
     padding: 30px;
