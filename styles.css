@@ -156,8 +156,8 @@ html {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
     margin: 2.5vw;
     padding: 2.5vw;
-    border-radius: 2.5vh;
     width: 90vw;
+    border-radius: 2.5vh;
     display: flex;
     flex-direction: column;
 }
@@ -534,18 +534,25 @@ form div h1 > input:focus, form > textarea:focus {
         height: 60vh;
         width: 0;
     }
-    .intro-title {
-        margin: 10vw;
-        width: 80vw;
-        font-size: 7.5vw;
-    }
     .intro-text, .intro-text a {
         font-size: 5vw;
+    }*/
+    .intro-container {
+        margin: 5vw;
+        padding: 5vw;
+        width: 80vw;
     }
     .intro-text {
-        margin: 10vw;
-        width: 80vw;
-    }*/
+        text-align: center;
+        font-size: 10px;
+    }
+    .intro-title {
+        text-align: center;
+        font-size: 7.5vw;
+    }
+    .intro-title::after {
+        width: 50vw;
+    }
     .main-title {
         margin: 0;
         position: absolute;
@@ -577,6 +584,11 @@ form div h1 > input:focus, form > textarea:focus {
         opacity: 1;
         transform: translateY(0px);
         pointer-events: auto;
+    }
+    .cta {
+        font-size: 10vw;
+        left: 35vw;
+        top: 55vh;
     }
 }
 
