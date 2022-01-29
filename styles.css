@@ -189,16 +189,6 @@ html {
     border: 1px solid grey;
 }
 
-/*.dropdown.active, */.dropdown:hover > .link {
-    color: white;
-}
-
-/*.dropdown.active, */.dropdown:hover > .link + .dropdown-menu {
-    opacity: 1;
-    transform: translateY(0px);
-    pointer-events: auto;
-}
-
 .Information-list {
     display: grid;
     grid-template-columns: repeat(2, max-content);
@@ -333,11 +323,10 @@ html.swup-enebled {
     margin: 3vw 1vw 0;
 }
 
-form input, form textarea, form button, form textarea {
+.forum-top input, form button, form textarea {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
     display: flex;
     flex-direction: column;
-    margin: .5vw;
     font-size: 15px;
     padding: .5vw;
     border-radius: 5px;
@@ -357,7 +346,7 @@ form textarea {
     width: 100%;
 }
 
-form > input:focus, form > textarea:focus {
+form div h1 > input:focus, form > textarea:focus {
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.75);
     transition: ease-in-out 500ms;
     border-color: #ff8000;
@@ -465,6 +454,15 @@ form > input:focus, form > textarea:focus {
     cursor: pointer;
     pointer-events: all;
 }
+@media screen and (min-width: 801px) {
+    .forum-top {
+        display: flex;
+        justify-content: center;
+    } 
+    .forum-top input {
+        width: auto;
+    }
+}
 
 @media screen and (max-width: 800px) {
     body {
@@ -542,6 +540,15 @@ form > input:focus, form > textarea:focus {
         width: 90vw;
         float: left;
         margin: 2.5vw;
+    }
+    .dropdown.active > .link {
+        color: white;
+    }
+    
+    .dropdown:hover > .link + .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0px);
+        pointer-events: auto;
     }
 }
 
