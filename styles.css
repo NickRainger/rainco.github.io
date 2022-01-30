@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
 :root {
-    --blue1: #030609;
-    --blue2: #060c11;
-    --blue3: #091219;
-    --blue4: #0c1821;
-    --blue5: #101d29;
-    --blue6: #142131;
-    --blue7: #182639;
-    --blue8: #1b2a41;
-    --blue9: #213249;
-    --blue10: #273a50;
+    --blue1: #060c11;
+    --blue2: #091219;
+    --blue3: #0c1821;
+    --blue4: #101d29;
+    --blue5: #142131;
+    --blue6: #182639;
+    --blue7: #1b2a41;
+    --blue8: #213249;
+    --blue9: #273a50;
 }
 
 body {
@@ -130,8 +129,6 @@ html {
 }
 
 .nieuws-button {
-    pointer-events: all;
-    cursor: pointer;
     font-size: 25px;
     text-decoration: underline;
     text-decoration-thickness: 3px;
@@ -146,6 +143,7 @@ html {
 }
 .nieuws-terug {
     font-size: 20px;
+    pointer-events: all;
 }
 .nieuws-header p span, .nieuws-header h1 span {
     background: var(--blue4);
@@ -266,7 +264,6 @@ html {
     opacity: 1;
     transform: translatex(0);
     transition: 200ms ease-in-out;
-    pointer-events: none;
 }
 
 html.is-animating .transition-fade {
@@ -305,8 +302,6 @@ html.swup-enebled {
 }
 
 .RhenenLink {
-    pointer-events: all;
-    cursor: pointer;
     color: #0000ff;
     font-size: 10vh;
     text-decoration: underline;
@@ -430,7 +425,7 @@ form div h1 > input:focus, form > textarea:focus {
     pointer-events: all;
     width: 100vw;
     padding: 1vw;
-    background: var(--blue2);
+    background: var(--blue1);
 }
 
 .team-foto {
