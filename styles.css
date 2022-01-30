@@ -477,17 +477,20 @@ form div h1 > input:focus, form > textarea:focus {
     pointer-events: all;
     cursor: pointer;
 }
-
-.footer {
-    background: chartreuse;
+/*
+#footer {
+    bottom: 0;
+    background: red;
+    position: absolute;
     border-top-left-radius: 2.5vh;
     border-top-right-radius: 2.5vh;
-    width: 90vw;
-    margin: 2.5vw;
+    width: 93vw;
+    margin: 2vw;
     margin-bottom: 0;
     padding: 1vw;
     text-align: center;
-}
+    display: block;
+}*/
 .nieuws-terug {
     font-size: 20px;
 }
