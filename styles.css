@@ -404,17 +404,12 @@ form div h1 > input:focus, form > textarea:focus {
     border-radius: .5vw;
     transition: 1000ms ease-in-out;
     margin: 1vw;
-    height: 10vh;
+    width: 5vw;
     float: left;
 }
 
 .download-list a img:hover {
-    height: 90vh;
-}
-
-.download-list a:hover > .download-img {
-    transition: 500ms ease-in-out;
-    opacity: 1;
+    width: 793px;
 }
 
 .team-header {
