@@ -1,13 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
-body {
-    background: #222222;
+:root {
+    --blue1: #030609;
+    --blue2: #060c11;
+    --blue3: #091219;
+    --blue4: #0c1821;
+    --blue5: #101d29;
+    --blue6: #142131;
+    --blue7: #182639;
+    --blue8: #1b2a41;
+    --blue9: #213249;
+    --blue10: #273a50;
 }
 
+body {
+    background: var(--blue1);
+}
+
+
 html {
+    font-size: 15px;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 .background {
     margin: 0;
@@ -50,15 +63,24 @@ html {
 .logo {
     width: 10vw;
     position: absolute;
-    top: 1vw;
+    top: 1vh;
     left: 1vw;
+    opacity: .5;
+    transition: 200ms ease-in-out;
+}
+.logo:hover {
+    transition: 200ms ease-in-out;
+    width: 10.5vw;
+    opacity: 1;
+    top: .75vh;
+    left: .75vw;
 }
 
 * {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 .header {
@@ -71,10 +93,10 @@ html {
 }
 
 .link {
-    color: rgba(255, 255, 255, .5);
+    color: #ffffff80;
     margin: .3vw 1vw;
     background: none;
-    font-size: 1vw;
+    font-size: 15px;
     border-style: none;
     cursor: pointer;
     transition: 100ms ease-in-out;
@@ -82,11 +104,7 @@ html {
 
 .link:hover, .linkhover {
     transform: scale(1.05);
-    color: rgba(255, 255, 255, 1);
-}
-
-.intro-text, .intro-title, .text {
-    margin: 5vh;
+    color: #ffffff;
 }
 
 .nieuws-container {
@@ -96,27 +114,50 @@ html {
 
 .nieuws-header {
     width: 90vw;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--blue2);
     border-radius: 2.5vh;
-    margin: 5vh;
-    padding: 5vh;
+    margin: 2.5vw;
+    padding: 2.5vw;
+}
+
+.nieuws-header p {
+    font-size: 15px;
 }
 
 .nieuws-title {
-    font-size: 4vh;
+    font-size: 20px;
     margin: 0;
-}
-
-.nieuws-text {
-    font-size: 2.5vh;
 }
 
 .nieuws-button {
     pointer-events: all;
     cursor: pointer;
-    font-size: 2vw;
+    font-size: 25px;
     text-decoration: underline;
-    text-decoration-color: blue;
+    text-decoration-thickness: 3px;
+    color: #ffffff80;
+    text-decoration-color: var(--blue4);
+    transition: 200ms ease-in-out;
+}
+.nieuws-button:hover {
+    transition: 200ms ease-in-out;
+    text-decoration-color: #0000ff;
+    color: #ffffff;
+}
+.nieuws-terug {
+    font-size: 20px;
+}
+.nieuws-header p span, .nieuws-header h1 span {
+    background: var(--blue4);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.nieuws-header p a {
+    color: #ff8000;
+    pointer-events: all;
+    cursor: pointer;
 }
 
 .contact-link {
@@ -124,18 +165,40 @@ html {
     pointer-events: all;
 }
 
-.intro-text, .intro-text a {
-    font-size: 1.5vw;
-}
-.intro-text {
-    margin: 5vw;
+.intro-container {
+    background: var(--blue2);
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    margin: 2.5vw;
+    padding: 2.5vw;
     width: 90vw;
+    border-radius: 2.5vh;
+    display: flex;
+    flex-direction: column;
+}
+/*
+.intro-text, .intro-title, .text {
 }
 
+.intro-text, .intro-text a {
+}
+.intro-text {
+}*/
+
+.intro-text p {
+    margin-left: 1vw;
+}
 .intro-title {
-    margin: 5vw;
-    width: 90vw;
-    font-size: 5vh;
+    text-align: center;
+    font-size: 30px;
+}
+.intro-title::after {
+    content: '';
+    width: 300px;
+    display: block;
+    height: 3px;
+    margin: 15px auto 10px auto;
+    justify-self: center;
+    background: #0000ff;
 }
 
 .dropdown-menu {
@@ -146,19 +209,9 @@ html {
     opacity: 0;
     transform: translateY(-100px);
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-    background: #1a1a1a;
+    background: var(--blue3);
     border-radius: 1vh;
     border: 1px solid grey;
-}
-
-.dropdown.active > .link {
-    color: white;
-}
-
-.dropdown.active > .link + .dropdown-menu {
-    opacity: 1;
-    transform: translateY(0px);
-    pointer-events: auto;
 }
 
 .Information-list {
@@ -173,16 +226,17 @@ html {
 }
 
 .dropdown-heading {
-    border-bottom: 1px solid grey;
-    background: rgb(42,26,40);
+    border-bottom: 1px solid #808080;
     background: linear-gradient(0deg, rgba(42,26,40,1) 0%, rgba(38,26,50,1) 100%); 
+    background: var(--blue4);
     padding: .3vw 1vw;
+    font-size: 20px;
 }
 
 .dropdown-links {
     border-bottom-left-radius: 3vh;
     border-bottom-right-radius: 3vh;
-    background: rgba(0, 0, 0, 0);
+    background: var(--blue3);
     display: flex;
     flex-direction: column;
     gap: .25rem;
@@ -194,12 +248,12 @@ html {
 }
 .spacer {
     z-index: -9;
-    height: 70vh;
+    height: 50vh;
     width: 0;
 }
 .big-spacer {
     z-index: -9;
-    height: 100vh;
+    height: 75vh;
     width: 0;
 }
 
@@ -228,8 +282,8 @@ html.swup-enebled {
 .main-title {
     margin: 0;
     position: absolute;
-    top: 20vh;
-    left: 10vw;
+    top: 15vh;
+    left: 25vw;
     font-size: 10vh;
     z-index: -1;
 }
@@ -240,6 +294,7 @@ html.swup-enebled {
 
 .BUnderline {
     text-decoration: underline;
+    text-decoration-thickness: 3px;
     text-decoration-color: blue;
 }
 
@@ -255,6 +310,7 @@ html.swup-enebled {
     color: #0000ff;
     font-size: 10vh;
     text-decoration: underline;
+    text-decoration-thickness: 3px;
 }
 
 .fa-map-marker-alt {
@@ -264,11 +320,10 @@ html.swup-enebled {
 }
 
 .forum {
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
     padding: 5vw;
     margin: 5vw;
     width: 80vw;
-    background: rgba(0, 0, 0, .5);
+    background: var(--blue2);
     border-radius: 2vw;
     pointer-events: all;
     
@@ -281,44 +336,47 @@ html.swup-enebled {
 .forum button {
     font-size: 1rem;
     list-style-type:none;
-    background: rgba(0, 0, 0, .5);
-    border-radius: 1vw;
-    padding: .5vw 1vw;
-    margin: 2vw;
+    background: var(--blue3);
+    padding: .5vw;
+    margin: 2vw .5vw;
     width: auto;
+}
+.forum button:hover {
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    border-color: #ff8000;
 }
 
 .forum h1 {
-    margin-left: 1vw;
+    margin: 3vw 1vw 0;
+    flex: auto;
 }
 
-form input, form textarea, form button, form textarea {
+.forum-top input, form button, form textarea {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
     display: flex;
     flex-direction: column;
-    margin: .5rem;
-    font-size: 1rem;
-    padding: .5rem;
+    font-size: 15px;
+    padding: .5vw;
+    border-radius: 5px;
     display: list-item;
     border-style: none;
     border-bottom-style: solid;
     border-bottom-width: 5px;
-    border-color: #024C97;
-    background: rgba(0, 0, 0, .5);
+    border-color: #0000ff;
+    background: var(--blue3);
     color: rgb(255, 255, 255);
     outline: 0;
     transition: ease-in-out 500ms;
-    width: 50%;
 }
 
 form textarea {
     width: 100%;
 }
 
-form > input:focus, form > textarea:focus {
+form div h1 > input:focus, form > textarea:focus {
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.75);
     transition: ease-in-out 500ms;
-    border-color: rgb(255, 128, 0);
+    border-color: #ff8000;
 }
 
 .download-list {
@@ -334,43 +392,45 @@ form > input:focus, form > textarea:focus {
 }
 
 .download-list a {
-    font-size: 1rem;
-    background-color: rgba(0, 0, 0, .5);
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75 inset);
-    border-radius: 1vw;
+    border-radius: 5px;
+    line-height: 10vh;
+    font-size: 1vw;
+    background: var(--blue2);
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: #024C97;
     margin: 1vw;
     padding: 1vw;
     cursor: pointer;
     pointer-events: all;
+    border-radius: 5px;
+    transition: 500ms ease-in-out;
 }
 .download-list a:hover {
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
+    transition: 500ms ease-in-out;
+    border-color: #ff8000;
+    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
 }
 
 .download-list a img {
     border-radius: .5vw;
-    transition: 200ms ease-in-out;
+    transition: 1000ms ease-in-out;
     margin: 1vw;
-    height: 10vh;
-    display: none;
-    float: right;
+    width: 5vw;
+    float: left;
 }
 
 .download-list a img:hover {
-    height: 75vh;
-}
-
-.download-list a:hover > .download-img {
-    display: block;
-    transition: 500ms ease-in-out;
-    opacity: 1;
+    width: 793px;
 }
 
 .team-header {
     pointer-events: all;
     width: 100vw;
-    margin: 0vh;
-
+    padding: 1vw;
+    background: var(--blue2);
 }
 
 .team-foto {
@@ -383,16 +443,18 @@ form > input:focus, form > textarea:focus {
 
 .team-text-title {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
+    background: var(--blue3);
     border-radius: 2vw;
-    font-size: 3vw;
-    padding: 5vw;
+    font-size: 30px;
+    padding: 30px;
 }
 
 .team-text, .team-text span, .team-text a{
     border-radius: 5px;
     right: 0;
-    font-size: 1.5rem;
-    margin: 1vw;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 2vw 0;
 }
 
 .transition {
@@ -400,8 +462,74 @@ form > input:focus, form > textarea:focus {
     z-index: 10;
 }
 
+.Contributie {
+    width: calc(827px/2);
+    margin: 0 5vw;
+    border-radius: 5px;
+}
 
-@media screen and (max-width: 1000px) {
+.marion {
+    border-radius: 5px;
+    width: calc(229px/2);   
+}
+
+.contact-marion {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.cta {
+    top: 50vh;
+    left: 70vw;
+    font-size: 40px;
+    position: absolute;
+    pointer-events: all;
+    cursor: pointer;    
+    text-decoration-thickness: 5px;
+}
+
+/*
+#footer {
+    bottom: 0;
+    background: red;
+    position: absolute;
+    border-top-left-radius: 2.5vh;
+    border-top-right-radius: 2.5vh;
+    width: 93vw;
+    margin: 2vw;
+    margin-bottom: 0;
+    padding: 1vw;
+    text-align: center;
+    display: block;
+}*/
+
+.vandaag {
+    text-align: center;
+    color: #ff0000;
+    border-radius: 2.5vh;
+}
+
+hr {
+    width: 100vw;
+    color: #ff0000;
+}
+
+@media screen and (min-width: 801px) {
+    .forum-top {
+        display: flex;
+        justify-content: center;
+    } 
+    .forum-top input {
+        width: auto;
+    }
+    .dropdown:hover > .link + .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0px);
+        pointer-events: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
     body {
         background-size: cover;
     }
@@ -411,9 +539,9 @@ form > input:focus, form > textarea:focus {
     }
     .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
         pointer-events: all;
-        top: 10vh;
+        top: 10vw;
         left: 5vw;
-        font-size: 12vw;
+        font-size: 10vw;
     }
     .logo {
         display: none;
@@ -423,6 +551,9 @@ form > input:focus, form > textarea:focus {
     }
     .link {
         font-size: 3.5vw;
+    }
+    form input, form textarea, form button, form textarea {
+        width: 100%;
     }
     /*
     .small-spacer {
@@ -439,18 +570,23 @@ form > input:focus, form > textarea:focus {
         z-index: -9;
         height: 60vh;
         width: 0;
-    }*/
-    .intro-title {
-        margin: 10vw;
-        width: 80vw;
-        font-size: 10vw;
     }
     .intro-text, .intro-text a {
         font-size: 5vw;
+    }*/
+    .intro-container {
+        margin: 5vw;
+        padding: 5vw;
+        width: 80vw;
     }
     .intro-text {
-        margin: 10vw;
-        width: 80vw;
+        text-align: center;
+    }
+    .intro-title {
+        text-align: center;
+    }
+    .intro-title::after {
+        width: 50vw;
     }
     .main-title {
         margin: 0;
@@ -475,10 +611,24 @@ form > input:focus, form > textarea:focus {
         float: left;
         margin: 2.5vw;
     }
+    .dropdown.active > .link {
+        color: white;
+    }
+    
+    .dropdown.active > .link + .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0px);
+        pointer-events: auto;
+    }
+    .cta {
+        font-size: 10vw;
+        left: 35vw;
+        top: 55vh;
+    }
 }
 
-@media screen and (min-width: 1001px) {
-}
+
+
 
 @keyframes bounce {
     0% {
