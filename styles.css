@@ -125,7 +125,7 @@ html {
     margin: 0;
 }
 
-.nieuws-text {
+.nieuws-header p {
     font-size: 15px;
 }
 
@@ -473,7 +473,7 @@ form div h1 > input:focus, form > textarea:focus {
     text-decoration-thickness: 5px;
 }
 
-.button {
+.button, .nieuws-header p{
     pointer-events: all;
     cursor: pointer;
 }
@@ -494,7 +494,7 @@ form div h1 > input:focus, form > textarea:focus {
 .nieuws-terug {
     font-size: 20px;
 }
-.highlight {
+.nieuws-header p a span {
     background: var(--blue4);
     padding: 3px 10px;
     margin: 5px;
@@ -504,10 +504,13 @@ form div h1 > input:focus, form > textarea:focus {
 .vandaag {
     text-align: center;
     font-size: 2vw;
-    color: #ff0000cc;
-    background: #ff000022;
-    margin: 2.5vw;
+    color: #ff0000;
     border-radius: 2.5vh;
+}
+
+hr {
+    width: 100vw;
+    color: #ff0000;
 }
 
 @media screen and (min-width: 801px) {
