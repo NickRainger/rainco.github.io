@@ -153,7 +153,7 @@ html {
 }
 
 .nieuws-header p a {
-    color: #ff8000;
+    color: #0000ff;
     pointer-events: all;
     cursor: pointer;
 }
@@ -173,15 +173,6 @@ html {
     display: flex;
     flex-direction: column;
 }
-/*
-.intro-text, .intro-title, .text {
-}
-
-.intro-text, .intro-text a {
-}
-.intro-text {
-}*/
-
 .intro-text p {
     margin-left: 1vw;
 }
@@ -314,7 +305,7 @@ html.swup-enebled {
     font-size: 10vh;
 }
 
-.forum {
+form {
     padding: 5vw;
     margin: 5vw;
     width: 80vw;
@@ -328,7 +319,7 @@ html.swup-enebled {
     color: #444444;
 }
 
-.forum button {
+form button {
     font-size: 1rem;
     list-style-type:none;
     background: var(--blue3);
@@ -336,17 +327,17 @@ html.swup-enebled {
     margin: 2vw .5vw;
     width: auto;
 }
-.forum button:hover {
+form button:hover {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
     border-color: #ff8000;
 }
 
-.forum h1 {
+form h1 {
     margin: 3vw 1vw 0;
     flex: auto;
 }
 
-.forum-top input, form button, form textarea {
+form div input, form button, form textarea {
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75) inset;
     display: flex;
     flex-direction: column;
@@ -513,17 +504,16 @@ hr {
 }
 
 @media screen and (min-width: 801px) {
-    .forum-top {
+    form div {
         display: flex;
         justify-content: center;
     } 
-    .forum-top input {
+    form div h1 {
         width: auto;
     }
     .dropdown:hover > .link + .dropdown-menu {
         opacity: 1;
         transform: translateY(0px);
-        pointer-events: auto;
     }
 }
 
@@ -536,7 +526,6 @@ hr {
         gap: 2rem;
     }
     .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
-        pointer-events: all;
         top: 10vw;
         left: 5vw;
         font-size: 10vw;
@@ -553,25 +542,6 @@ hr {
     form input, form textarea, form button, form textarea {
         width: 100%;
     }
-    /*
-    .small-spacer {
-        z-index: -9;
-        height: 10vh;
-        width: 0;
-    }
-    .spacer {
-        z-index: -9;
-        height: 40vh;
-        width: 0;
-    }
-    .big-spacer {
-        z-index: -9;
-        height: 60vh;
-        width: 0;
-    }
-    .intro-text, .intro-text a {
-        font-size: 5vw;
-    }*/
     .intro-container {
         margin: 5vw;
         padding: 5vw;
@@ -622,6 +592,12 @@ hr {
         font-size: 10vw;
         left: 35vw;
         top: 55vh;
+    }
+    .Contributie {
+        width: 70vw;
+    }
+    .nieuws-header p, .nieuws-header h1 {
+        text-align: center;
     }
 }
 
