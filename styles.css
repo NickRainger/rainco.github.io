@@ -451,6 +451,9 @@ form div h1 > input:focus, form > textarea:focus {
     font-weight: 400;
     margin: 2vw 0;
 }
+.team-text {
+    margin: 2vw 1vw;
+}
 
 .transition {
     width: 100vw;
