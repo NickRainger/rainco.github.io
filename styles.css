@@ -122,12 +122,12 @@ html {
 }
 
 .nieuws-title {
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
 }
 
 .nieuws-text {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .nieuws-button {
@@ -509,8 +509,8 @@ form div h1 > input:focus, form > textarea:focus {
     .main-title, .main-title span, .RhenenLink, .main-title p, .fa-map-marker-alt{
         pointer-events: all;
         top: 10vw;
-        left: 10vw;
-        font-size: 15vw;
+        left: 5vw;
+        font-size: 10vw;
     }
     .logo {
         display: none;
@@ -550,11 +550,9 @@ form div h1 > input:focus, form > textarea:focus {
     }
     .intro-text {
         text-align: center;
-        font-size: 10px;
     }
     .intro-title {
         text-align: center;
-        font-size: 7.5vw;
     }
     .intro-title::after {
         width: 50vw;
