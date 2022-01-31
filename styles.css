@@ -20,6 +20,7 @@ body {
 html {
     font-size: 15px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 .background {
     margin: 0;
@@ -194,9 +195,9 @@ html {
     overflow: hidden;
     z-index: 3;
     position: absolute;
-    pointer-events: none;
     opacity: 0;
     transform: translateY(-100px);
+    pointer-events: none;
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
     background: var(--blue3);
     border-radius: 1vh;
@@ -514,8 +515,15 @@ hr {
     form div h1 {
         width: auto;
     }
+    form div > *:nth-child(1) {
+        margin-left: 0;
+    }
+    form div > :nth-child(3) {
+        margin-right: 0;
+    }
     .dropdown:hover > .link + .dropdown-menu {
         opacity: 1;
+        pointer-events: all;
         transform: translateY(0px);
     }
 }
