@@ -164,7 +164,7 @@ html {
     pointer-events: all;
 }
 
-.intro-container {
+.info-container {
     background: var(--blue2);
     box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
     margin: 2.5vw;
@@ -174,14 +174,14 @@ html {
     display: flex;
     flex-direction: column;
 }
-.intro-text p {
+.info-text p {
     margin-left: 1vw;
 }
-.intro-title {
+.info-title {
     text-align: center;
     font-size: 30px;
 }
-.intro-title::after {
+.info-title::after {
     content: '';
     width: 300px;
     display: block;
@@ -291,19 +291,6 @@ html.swup-enebled {
     animation: bounce 4s 2s ease-in-out infinite;
     font-size: 10vh;
     margin: 0;
-}
-
-.RhenenLink {
-    color: #0000ff;
-    font-size: 10vh;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-
-.fa-map-marker-alt {
-    cursor: pointer;
-    color: blue;
-    font-size: 10vh;
 }
 
 form {
@@ -416,59 +403,9 @@ form div h1 input {
     width: 793px;
 }
 
-.team-header {
-    pointer-events: all;
-    width: 100vw;
-    padding: 1vw;
-    background: var(--blue1);
-}
-
-.team-foto {
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
-    border-radius: 2vw;
-    width: 40vw;
-    float: left;
-    margin: 2.5vw;
-}
-
-.team-text-title {
-    box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.75);
-    background: var(--blue3);
-    border-radius: 2vw;
-    font-size: 30px;
-    padding: 30px;
-}
-
-.team-text, .team-text span, .team-text a{
-    border-radius: 5px;
-    right: 0;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 2vw 0;
-}
-.team-text {
-    margin: 2vw 1vw;
-}
-
 .transition {
     width: 100vw;
     z-index: 10;
-}
-
-.Contributie {
-    width: calc(827px/2);
-    margin: 0 5vw;
-    border-radius: 5px;
-}
-
-.marion {
-    border-radius: 5px;
-    width: calc(229px/2);   
-}
-
-.contact-marion {
-    cursor: pointer;
-    pointer-events: all;
 }
 
 .cta {
