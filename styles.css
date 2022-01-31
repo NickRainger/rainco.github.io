@@ -272,7 +272,7 @@ html.swup-enebled {
     margin: 0;
     position: absolute;
     top: 15vh;
-    left: 25vw;
+    left: 10vw;
     font-size: 10vh;
     z-index: -1;
 }
@@ -473,7 +473,7 @@ form div h1 input {
 
 .cta {
     top: 50vh;
-    left: 70vw;
+    right: 10vw;
     font-size: 40px;
     position: absolute;
     pointer-events: all;
